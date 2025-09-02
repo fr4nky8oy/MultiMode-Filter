@@ -19,9 +19,15 @@ NewPluginSkeletonAudioProcessor::NewPluginSkeletonAudioProcessor()
                       #endif
                        .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
                      #endif
-                       )
+                       ), parameters(*this, nullptr, "Parameters", createParameterLayout())
 #endif
 {
+    // Get parameter pointers
+    cutoffFreq = dynamic_cast<juce::AudioParameterFloat*>(parameters.getParameter("cutoff"));
+    resonance = dynamic_cast<juce::AudioParameterFloat*>(parameters.getParameter("resonance"));
+    filterSlope = dynamic_cast<juce::AudioParameterChoice*>(parameters.getParameter("slope"));
+    filterType = dynamic_cast<juce::AudioParameterChoice*>(parameters.getParameter("filterType"));
+    gain = dynamic_cast<juce::AudioParameterFloat*>(parameters.getParameter("gain"));
 }
 
 NewPluginSkeletonAudioProcessor::~NewPluginSkeletonAudioProcessor()
@@ -93,8 +99,40 @@ void NewPluginSkeletonAudioProcessor::changeProgramName (int index, const juce::
 //==============================================================================
 void NewPluginSkeletonAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    // Use this method as the place to do any pre-playback
-    // initialisation that you need..
+    // Initialize DSP components
+    juce::dsp::ProcessSpec spec;
+    spec.sampleRate = sampleRate;
+    spec.maximumBlockSize = static_cast<juce::uint32>(samplesPerBlock);
+    spec.numChannels = static_cast<juce::uint32>(getTotalNumOutputChannels());
+    
+    numChannels = getTotalNumOutputChannels();
+    
+    // Prepare all filter stages in the chain
+    for (auto& filter : filterChain)
+    {
+        filter.prepare(spec);
+        filter.setType(juce::dsp::StateVariableTPTFilterType::lowpass);
+    }
+    
+    // Prepare output limiter to prevent exceeding -0.1dB
+    outputLimiter.prepare(spec);
+    outputLimiter.setThreshold(-0.1f); // -0.1dB threshold
+    outputLimiter.setRelease(5.0f);    // Fast 5ms release time
+    
+    // Initialize parameter smoothers
+    cutoffSmoother.reset(sampleRate, 0.05); // 50ms ramp
+    resonanceSmoother.reset(sampleRate, 0.02); // 20ms ramp
+    gainSmoother.reset(sampleRate, 0.02); // 20ms ramp
+    slopeSmoother.reset(sampleRate, 0.1); // 100ms ramp for smooth slope transitions
+    
+    // Set initial parameter values
+    if (cutoffFreq != nullptr && resonance != nullptr && filterSlope != nullptr && gain != nullptr)
+    {
+        cutoffSmoother.setCurrentAndTargetValue(cutoffFreq->get());
+        resonanceSmoother.setCurrentAndTargetValue(resonance->get());
+        gainSmoother.setCurrentAndTargetValue(gain->get());
+        slopeSmoother.setCurrentAndTargetValue(static_cast<float>(filterSlope->getIndex()));
+    }
 }
 
 void NewPluginSkeletonAudioProcessor::releaseResources()
@@ -135,27 +173,123 @@ void NewPluginSkeletonAudioProcessor::processBlock (juce::AudioBuffer<float>& bu
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
 
-    // In case we have more outputs than inputs, this code clears any output
-    // channels that didn't contain input data, (because these aren't
-    // guaranteed to be empty - they may contain garbage).
-    // This is here to avoid people getting screaming feedback
-    // when they first compile a plugin, but obviously you don't need to keep
-    // this code if your algorithm always overwrites all the output channels.
+    // Clear any output channels that don't contain input data
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
 
-    // This is the place where you'd normally do the guts of your plugin's
-    // audio processing...
-    // Make sure to reset the state if your inner loop is processing
-    // the samples and the outer loop is handling the channels.
-    // Alternatively, you can process the samples with the channels
-    // interleaved by keeping the same state.
-    for (int channel = 0; channel < totalNumInputChannels; ++channel)
-    {
-        auto* channelData = buffer.getWritePointer (channel);
+    // Update parameter smoothers
+    if (cutoffFreq != nullptr)
+        cutoffSmoother.setTargetValue(cutoffFreq->get());
+    if (resonance != nullptr)
+        resonanceSmoother.setTargetValue(resonance->get());
+    if (gain != nullptr)
+        gainSmoother.setTargetValue(gain->get());
+    if (filterSlope != nullptr)
+        slopeSmoother.setTargetValue(static_cast<float>(filterSlope->getIndex()));
 
-        // ..do something to the data...
+    // Get current parameter settings
+    int slope = filterSlope != nullptr ? filterSlope->getIndex() : 0; // Default 6dB
+    int filterTypeIndex = filterType != nullptr ? filterType->getIndex() : 0; // Default Low-pass
+    
+    // Map filter type index to StateVariableTPTFilterType
+    juce::dsp::StateVariableTPTFilterType filterMode;
+    switch (filterTypeIndex)
+    {
+        case 0: filterMode = juce::dsp::StateVariableTPTFilterType::lowpass; break;   // Low-pass
+        case 1: filterMode = juce::dsp::StateVariableTPTFilterType::highpass; break;  // High-pass
+        case 2: filterMode = juce::dsp::StateVariableTPTFilterType::bandpass; break;  // Band-pass
+        default: filterMode = juce::dsp::StateVariableTPTFilterType::lowpass; break;
     }
+    
+    auto numSamples = buffer.getNumSamples();
+    
+    // Update filter parameters for each sample (sample-accurate automation)
+    for (int sample = 0; sample < numSamples; ++sample)
+    {
+        float currentCutoff = cutoffSmoother.getNextValue();
+        float currentResonance = resonanceSmoother.getNextValue();
+        float currentGainDB = gainSmoother.getNextValue();
+        float currentSlopeSmooth = slopeSmoother.getNextValue();
+        
+        // Convert gain from dB to linear
+        float gainLinear = juce::Decibels::decibelsToGain(currentGainDB);
+        
+        // Get integer slope indices for crossfading
+        int currentSlopeIndex = static_cast<int>(std::round(currentSlopeSmooth));
+        int prevSlopeIndex = currentSlopeIndex;
+        float crossfadeAmount = 0.0f;
+        
+        // Calculate crossfade if we're between slopes
+        if (currentSlopeSmooth != static_cast<float>(currentSlopeIndex))
+        {
+            prevSlopeIndex = static_cast<int>(std::floor(currentSlopeSmooth));
+            int nextSlopeIndex = static_cast<int>(std::ceil(currentSlopeSmooth));
+            if (prevSlopeIndex != nextSlopeIndex)
+            {
+                crossfadeAmount = currentSlopeSmooth - static_cast<float>(prevSlopeIndex);
+                currentSlopeIndex = nextSlopeIndex;
+            }
+        }
+        
+        // Update all filters with current parameters
+        // For proper Butterworth response, distribute Q across stages
+        int numStages = getSlopeFilterStages(currentSlopeIndex);
+        float stageResonance = currentResonance;
+        
+        // For cascaded filters, adjust Q per stage for proper Butterworth response
+        if (numStages > 1)
+        {
+            // Butterworth Q values: 2-pole = 0.707, 4-pole cascaded = 0.54 and 1.31
+            if (numStages == 2)
+                stageResonance = currentResonance * 0.707f / 0.707f; // Normalized
+            else if (numStages == 4)
+                stageResonance = currentResonance * 0.54f / 0.707f; // Use lower Q for stability
+        }
+        
+        for (int stage = 0; stage < maxFilterStages; ++stage)
+        {
+            filterChain[stage].setCutoffFrequency(currentCutoff);
+            filterChain[stage].setResonance(stageResonance);
+            filterChain[stage].setType(filterMode);
+        }
+        
+        // Process each channel through the cascaded filter chain
+        for (int ch = 0; ch < totalNumInputChannels; ++ch)
+        {
+            float inputSample = buffer.getSample(ch, sample);
+            float outputSample = inputSample;
+            
+            // Process through active filter stages
+            int activeStages = getSlopeFilterStages(currentSlopeIndex);
+            for (int stage = 0; stage < activeStages; ++stage)
+            {
+                outputSample = filterChain[stage].processSample(ch, outputSample);
+            }
+            
+            // If crossfading, also process through previous slope configuration
+            if (crossfadeAmount > 0.0f && prevSlopeIndex != currentSlopeIndex)
+            {
+                float prevOutputSample = inputSample;
+                int prevStages = getSlopeFilterStages(prevSlopeIndex);
+                for (int stage = 0; stage < prevStages; ++stage)
+                {
+                    prevOutputSample = filterChain[stage].processSample(ch, prevOutputSample);
+                }
+                // Crossfade between the two slope outputs
+                outputSample = prevOutputSample * (1.0f - crossfadeAmount) + outputSample * crossfadeAmount;
+            }
+            
+            // Apply post-filter gain
+            outputSample *= gainLinear;
+            
+            buffer.setSample(ch, sample, outputSample);
+        }
+    }
+    
+    // Apply output limiting to ensure signal never exceeds -0.1dB
+    juce::dsp::AudioBlock<float> block(buffer);
+    juce::dsp::ProcessContextReplacing<float> context(block);
+    outputLimiter.process(context);
 }
 
 //==============================================================================
@@ -172,15 +306,53 @@ juce::AudioProcessorEditor* NewPluginSkeletonAudioProcessor::createEditor()
 //==============================================================================
 void NewPluginSkeletonAudioProcessor::getStateInformation (juce::MemoryBlock& destData)
 {
-    // You should use this method to store your parameters in the memory block.
-    // You could do that either as raw data, or use the XML or ValueTree classes
-    // as intermediaries to make it easy to save and load complex data.
+    auto state = parameters.copyState();
+    std::unique_ptr<juce::XmlElement> xml(state.createXml());
+    copyXmlToBinary(*xml, destData);
 }
 
 void NewPluginSkeletonAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
 {
-    // You should use this method to restore your parameters from this memory block,
-    // whose contents will have been created by the getStateInformation() call.
+    std::unique_ptr<juce::XmlElement> xmlState(getXmlFromBinary(data, sizeInBytes));
+    if (xmlState.get() != nullptr)
+        if (xmlState->hasTagName(parameters.state.getType()))
+            parameters.replaceState(juce::ValueTree::fromXml(*xmlState));
+}
+
+//==============================================================================
+juce::AudioProcessorValueTreeState::ParameterLayout NewPluginSkeletonAudioProcessor::createParameterLayout()
+{
+    juce::AudioProcessorValueTreeState::ParameterLayout layout;
+    
+    // Cutoff frequency parameter (20Hz - 20kHz, logarithmic)
+    layout.add(std::make_unique<juce::AudioParameterFloat>(
+        "cutoff", "Cutoff Frequency",
+        juce::NormalisableRange<float>(20.0f, 20000.0f, 1.0f, 0.3f), 1000.0f,
+        "Hz"));
+    
+    // Resonance parameter (0.1 - 5.0, linear)  
+    layout.add(std::make_unique<juce::AudioParameterFloat>(
+        "resonance", "Resonance",
+        juce::NormalisableRange<float>(0.1f, 5.0f, 0.01f), 0.707f,
+        "Q"));
+    
+    // Filter slope parameter (6dB, 12dB, 24dB)
+    juce::StringArray slopeChoices = {"6 dB/oct", "12 dB/oct", "24 dB/oct"};
+    layout.add(std::make_unique<juce::AudioParameterChoice>(
+        "slope", "Filter Slope", slopeChoices, 0)); // Default to 6dB
+    
+    // Filter type parameter (Low-pass, High-pass, Band-pass)
+    juce::StringArray typeChoices = {"Low-pass", "High-pass", "Band-pass"};
+    layout.add(std::make_unique<juce::AudioParameterChoice>(
+        "filterType", "Filter Type", typeChoices, 0)); // Default to Low-pass
+    
+    // Post-filter gain parameter (-24dB to +12dB)
+    layout.add(std::make_unique<juce::AudioParameterFloat>(
+        "gain", "Gain",
+        juce::NormalisableRange<float>(-24.0f, 12.0f, 0.1f), 0.0f,
+        "dB"));
+    
+    return layout;
 }
 
 //==============================================================================
@@ -188,4 +360,16 @@ void NewPluginSkeletonAudioProcessor::setStateInformation (const void* data, int
 juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
     return new NewPluginSkeletonAudioProcessor();
+}
+
+//==============================================================================
+int NewPluginSkeletonAudioProcessor::getSlopeFilterStages(int slopeIndex) const
+{
+    switch (slopeIndex)
+    {
+        case 0: return 1; // 6dB/oct - 1 stage (1-pole equivalent)
+        case 1: return 2; // 12dB/oct - 2 stages (2-pole)
+        case 2: return 4; // 24dB/oct - 4 stages (4-pole)
+        default: return 1;
+    }
 }
