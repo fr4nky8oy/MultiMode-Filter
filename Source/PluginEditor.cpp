@@ -52,6 +52,7 @@ NewPluginSkeletonAudioProcessorEditor::NewPluginSkeletonAudioProcessorEditor (Ne
                 {
                     auto valueTree = juce::ValueTree::fromXml(*xml);
                     audioProcessor.parameters.replaceState(valueTree);
+                    updateButtonStates(); // Update button states after loading preset
                 }
             }
         }
@@ -204,9 +205,10 @@ NewPluginSkeletonAudioProcessorEditor::NewPluginSkeletonAudioProcessorEditor (Ne
             audioProcessor.parameters.getParameter("filterType")->setValueNotifyingHost(1.0f);
     };
     
-    // Start timer for value label updates
+    // Start timer for value label updates and button state sync
     startTimerHz(30);
     updateValueLabels();
+    updateButtonStates();
 }
 
 NewPluginSkeletonAudioProcessorEditor::~NewPluginSkeletonAudioProcessorEditor()
@@ -294,6 +296,7 @@ void NewPluginSkeletonAudioProcessorEditor::resized()
 void NewPluginSkeletonAudioProcessorEditor::timerCallback()
 {
     updateValueLabels();
+    updateButtonStates();
 }
 
 void NewPluginSkeletonAudioProcessorEditor::updateValueLabels()
@@ -321,32 +324,60 @@ juce::String NewPluginSkeletonAudioProcessorEditor::formatGainValue(float value)
     return juce::String(value, 1) + " dB";
 }
 
+void NewPluginSkeletonAudioProcessorEditor::updateButtonStates()
+{
+    // Update slope buttons based on parameter value
+    auto* slopeParam = audioProcessor.parameters.getParameter("slope");
+    if (slopeParam)
+    {
+        float slopeValue = slopeParam->getValue();
+        int slopeIndex = static_cast<int>(slopeValue * 2.0f + 0.5f); // Round to nearest int
+        
+        slope6dBButton.setToggleState(slopeIndex == 0, juce::dontSendNotification);
+        slope12dBButton.setToggleState(slopeIndex == 1, juce::dontSendNotification);
+        slope24dBButton.setToggleState(slopeIndex == 2, juce::dontSendNotification);
+    }
+    
+    // Update filter type buttons based on parameter value
+    auto* filterTypeParam = audioProcessor.parameters.getParameter("filterType");
+    if (filterTypeParam)
+    {
+        float typeValue = filterTypeParam->getValue();
+        int typeIndex = static_cast<int>(typeValue * 2.0f + 0.5f); // Round to nearest int
+        
+        lowPassButton.setToggleState(typeIndex == 0, juce::dontSendNotification);
+        highPassButton.setToggleState(typeIndex == 1, juce::dontSendNotification);
+        bandPassButton.setToggleState(typeIndex == 2, juce::dontSendNotification);
+    }
+}
+
 void NewPluginSkeletonAudioProcessorEditor::savePreset()
 {
-    // Simple approach - use a generated timestamp as preset name for now
-    auto timestamp = juce::Time::getCurrentTime().formatted("%Y%m%d_%H%M%S");
-    auto presetName = "Preset_" + timestamp;
-    
-    auto presetFile = getPresetDirectory().getChildFile(presetName + ".xml");
-    
-    // Get current state from processor
-    auto state = audioProcessor.parameters.copyState();
-    auto xml = state.createXml();
-    
-    if (xml != nullptr && xml->writeTo(presetFile))
-    {
-        updatePresetComboBox();
-        
-        // Select the newly saved preset
-        for (int i = 0; i < presetComboBox.getNumItems(); ++i)
+    showPresetNameDialog([this](const juce::String& presetName) {
+        if (presetName.isNotEmpty())
         {
-            if (presetComboBox.getItemText(i) == presetName)
+            auto presetFile = getPresetDirectory().getChildFile(presetName + ".xml");
+            
+            // Get current state from processor
+            auto state = audioProcessor.parameters.copyState();
+            auto xml = state.createXml();
+            
+            if (xml != nullptr && xml->writeTo(presetFile))
             {
-                presetComboBox.setSelectedItemIndex(i, juce::dontSendNotification);
-                break;
+                updatePresetComboBox();
+                
+                // Select the newly saved preset
+                for (int i = 0; i < presetComboBox.getNumItems(); ++i)
+                {
+                    if (presetComboBox.getItemText(i) == presetName)
+                    {
+                        presetComboBox.setSelectedItemIndex(i, juce::dontSendNotification);
+                        break;
+                    }
+                }
             }
         }
-    }
+    });
 }
 
 void NewPluginSkeletonAudioProcessorEditor::loadPreset()
@@ -365,6 +396,7 @@ void NewPluginSkeletonAudioProcessorEditor::loadPreset()
                                 {
                                     auto valueTree = juce::ValueTree::fromXml(*xml);
                                     audioProcessor.parameters.replaceState(valueTree);
+                                    updateButtonStates(); // Update button states after loading
                                     
                                     // Update combo box selection
                                     auto presetName = file.getFileNameWithoutExtension();
@@ -438,4 +470,84 @@ void NewPluginSkeletonAudioProcessorEditor::setCurrentPresetName(const juce::Str
             break;
         }
     }
+}
+
+void NewPluginSkeletonAudioProcessorEditor::showPresetNameDialog(std::function<void(const juce::String&)> callback)
+{
+    // Create a simple input dialog
+    class PresetNameDialog : public juce::Component
+    {
+    public:
+        PresetNameDialog(std::function<void(const juce::String&)> onComplete)
+            : onCompleteCallback(onComplete)
+        {
+            addAndMakeVisible(nameEditor);
+            addAndMakeVisible(saveButton);
+            addAndMakeVisible(cancelButton);
+            
+            nameEditor.setText("New Preset");
+            nameEditor.selectAll();
+            
+            saveButton.setButtonText("Save");
+            cancelButton.setButtonText("Cancel");
+            
+            saveButton.onClick = [this]() {
+                if (onCompleteCallback)
+                    onCompleteCallback(nameEditor.getText());
+                closeDialog();
+            };
+            
+            cancelButton.onClick = [this]() {
+                closeDialog();
+            };
+            
+            setSize(300, 120);
+            nameEditor.onReturnKey = [this]() { saveButton.onClick(); };
+        }
+        
+        void resized() override
+        {
+            auto area = getLocalBounds().reduced(20);
+            nameEditor.setBounds(area.removeFromTop(30));
+            area.removeFromTop(10);
+            
+            auto buttonArea = area.removeFromTop(30);
+            saveButton.setBounds(buttonArea.removeFromLeft(80));
+            buttonArea.removeFromLeft(10);
+            cancelButton.setBounds(buttonArea.removeFromLeft(80));
+        }
+        
+        void paint(juce::Graphics& g) override
+        {
+            g.fillAll(juce::Colour(0xff2c3e50));
+            g.setColour(juce::Colours::white);
+            g.setFont(16.0f);
+            g.drawText("Enter preset name:", 20, 10, getWidth() - 40, 20, juce::Justification::centredLeft);
+        }
+        
+        void parentHierarchyChanged() override
+        {
+            if (auto* parent = getParentComponent())
+            {
+                centreWithSize(getWidth(), getHeight());
+                nameEditor.grabKeyboardFocus();
+            }
+        }
+        
+    private:
+        juce::TextEditor nameEditor;
+        juce::TextButton saveButton, cancelButton;
+        std::function<void(const juce::String&)> onCompleteCallback;
+        
+        void closeDialog()
+        {
+            if (auto* parent = getParentComponent())
+                parent->removeChildComponent(this);
+            delete this;
+        }
+    };
+    
+    auto* dialog = new PresetNameDialog(callback);
+    addAndMakeVisible(dialog);
+    dialog->toFront(true);
 }

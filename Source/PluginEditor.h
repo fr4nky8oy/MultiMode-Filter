@@ -181,11 +181,14 @@ private:
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> cutoffAttachment;
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> resonanceAttachment;
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> gainAttachment;
-    std::unique_ptr<juce::AudioProcessorValueTreeState::ButtonAttachment> slopeAttachment;
-    std::unique_ptr<juce::AudioProcessorValueTreeState::ButtonAttachment> filterTypeAttachment;
+    
+    // We need to handle slope and filter type manually since they use radio buttons
+    // std::unique_ptr<juce::AudioProcessorValueTreeState::ButtonAttachment> slopeAttachment;
+    // std::unique_ptr<juce::AudioProcessorValueTreeState::ButtonAttachment> filterTypeAttachment;
     
     // Helper methods
     void updateValueLabels();
+    void updateButtonStates();
     juce::String formatCutoffValue(float value);
     juce::String formatResonanceValue(float value);
     juce::String formatGainValue(float value);
@@ -198,6 +201,7 @@ private:
     void createPresetDirectory();
     juce::String getCurrentPresetName();
     void setCurrentPresetName(const juce::String& name);
+    void showPresetNameDialog(std::function<void(const juce::String&)> callback);
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (NewPluginSkeletonAudioProcessorEditor)
 };
