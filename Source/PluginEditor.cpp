@@ -16,10 +16,9 @@ NewPluginSkeletonAudioProcessorEditor::NewPluginSkeletonAudioProcessorEditor (Ne
     // Set custom look and feel
     setLookAndFeel(&modernLookAndFeel);
     
-    // Configure main window
-    setSize(500, 400);
-    setResizable(true, true);
-    setResizeLimits(400, 300, 800, 600);
+    // Configure main window - fixed size
+    setSize(600, 450);
+    setResizable(false, false);
     
     // Title label
     titleLabel.setText("Franky's Filters", juce::dontSendNotification);
@@ -226,10 +225,14 @@ void NewPluginSkeletonAudioProcessorEditor::paint (juce::Graphics& g)
     g.setGradientFill(backgroundGradient);
     g.fillAll();
     
-    // Draw section dividers
-    g.setColour(juce::Colour(0xff34495e));
-    const int sectionY = getHeight() * 0.55f;
-    g.drawLine(20, sectionY, getWidth() - 20, sectionY, 1.0f);
+    // Draw section divider line (separates rotary controls from filter controls)
+    g.setColour(juce::Colour(0xff4a5568));
+    const int dividerY = 280; // Match the position from resized()
+    g.drawLine(20, dividerY, getWidth() - 20, dividerY, 2.0f);
+    
+    // Add subtle shadow below the line for depth
+    g.setColour(juce::Colour(0x30000000));
+    g.drawLine(20, dividerY + 1, getWidth() - 20, dividerY + 1, 1.0f);
 }
 
 void NewPluginSkeletonAudioProcessorEditor::resized()
@@ -238,12 +241,19 @@ void NewPluginSkeletonAudioProcessorEditor::resized()
     const int titleHeight = 40;
     const int presetHeight = 25;
     const int presetButtonWidth = 60;
-    const int knobSize = 100;
+    const int knobSize = 90;
     const int labelHeight = 20;
     const int buttonHeight = 30;
     const int buttonWidth = 80;
     
-    // Title and preset section
+    // Fixed dimensions for 600x450 window
+    const int totalWidth = 600;
+    const int totalHeight = 450;
+    const int dividerY = 280; // Position of the dividing line
+    
+    // === TOP SECTION: Title and Preset Controls ===
+    
+    // Title label
     const int titleWidth = 200;
     titleLabel.setBounds(margin, margin, titleWidth, titleHeight);
     
@@ -254,43 +264,49 @@ void NewPluginSkeletonAudioProcessorEditor::resized()
     savePresetButton.setBounds(presetStartX + presetComboWidth + 10, margin + 8, presetButtonWidth, presetHeight);
     loadPresetButton.setBounds(presetStartX + presetComboWidth + presetButtonWidth + 20, margin + 8, presetButtonWidth, presetHeight);
     
-    // Calculate knob positions
-    const int knobY = margin + titleHeight + 20;
-    const int knobSpacing = (getWidth() - margin * 2 - knobSize * 3) / 2;
+    // === MIDDLE SECTION: Rotary Controls (Above divider line) ===
+    
+    const int knobY = margin + titleHeight + 30;
+    const int availableWidth = totalWidth - (margin * 2);
+    const int knobSpacing = (availableWidth - (knobSize * 3)) / 2;
     
     // Cutoff
     int xPos = margin;
     cutoffLabel.setBounds(xPos, knobY - labelHeight, knobSize, labelHeight);
     cutoffSlider.setBounds(xPos, knobY, knobSize, knobSize);
-    cutoffValueLabel.setBounds(xPos, knobY + knobSize, knobSize, labelHeight);
+    cutoffValueLabel.setBounds(xPos, knobY + knobSize + 5, knobSize, labelHeight);
     
     // Resonance
     xPos += knobSize + knobSpacing;
     resonanceLabel.setBounds(xPos, knobY - labelHeight, knobSize, labelHeight);
     resonanceSlider.setBounds(xPos, knobY, knobSize, knobSize);
-    resonanceValueLabel.setBounds(xPos, knobY + knobSize, knobSize, labelHeight);
+    resonanceValueLabel.setBounds(xPos, knobY + knobSize + 5, knobSize, labelHeight);
     
     // Gain
     xPos += knobSize + knobSpacing;
     gainLabel.setBounds(xPos, knobY - labelHeight, knobSize, labelHeight);
     gainSlider.setBounds(xPos, knobY, knobSize, knobSize);
-    gainValueLabel.setBounds(xPos, knobY + knobSize, knobSize, labelHeight);
+    gainValueLabel.setBounds(xPos, knobY + knobSize + 5, knobSize, labelHeight);
     
-    // Button sections
-    const int buttonSectionY = knobY + knobSize + labelHeight + 30;
+    // === BOTTOM SECTION: Filter Controls (Below divider line) ===
     
-    // Slope buttons
-    slopeLabel.setBounds(margin, buttonSectionY, 100, labelHeight);
-    slope6dBButton.setBounds(margin, buttonSectionY + labelHeight + 5, buttonWidth, buttonHeight);
-    slope12dBButton.setBounds(margin + buttonWidth + 10, buttonSectionY + labelHeight + 5, buttonWidth, buttonHeight);
-    slope24dBButton.setBounds(margin + (buttonWidth + 10) * 2, buttonSectionY + labelHeight + 5, buttonWidth, buttonHeight);
+    const int bottomSectionY = dividerY + 20; // Start below the divider
+    const int bottomCenterY = bottomSectionY + 20;
     
-    // Filter type buttons
-    const int filterTypeX = getWidth() / 2 + 20;
-    filterTypeLabel.setBounds(filterTypeX, buttonSectionY, 100, labelHeight);
-    lowPassButton.setBounds(filterTypeX, buttonSectionY + labelHeight + 5, buttonWidth, buttonHeight);
-    highPassButton.setBounds(filterTypeX + buttonWidth + 10, buttonSectionY + labelHeight + 5, buttonWidth, buttonHeight);
-    bandPassButton.setBounds(filterTypeX + (buttonWidth + 10) * 2, buttonSectionY + labelHeight + 5, buttonWidth, buttonHeight);
+    // Slope section (left side)
+    slopeLabel.setBounds(margin, bottomCenterY, 100, labelHeight);
+    const int slopeButtonY = bottomCenterY + labelHeight + 5;
+    slope6dBButton.setBounds(margin, slopeButtonY, buttonWidth, buttonHeight);
+    slope12dBButton.setBounds(margin + buttonWidth + 5, slopeButtonY, buttonWidth, buttonHeight);
+    slope24dBButton.setBounds(margin + (buttonWidth + 5) * 2, slopeButtonY, buttonWidth, buttonHeight);
+    
+    // Filter type section (right side)
+    const int filterTypeX = totalWidth - margin - (buttonWidth * 3 + 10);
+    filterTypeLabel.setBounds(filterTypeX, bottomCenterY, 120, labelHeight);
+    const int filterButtonY = bottomCenterY + labelHeight + 5;
+    lowPassButton.setBounds(filterTypeX, filterButtonY, buttonWidth, buttonHeight);
+    highPassButton.setBounds(filterTypeX + buttonWidth + 5, filterButtonY, buttonWidth, buttonHeight);
+    bandPassButton.setBounds(filterTypeX + (buttonWidth + 5) * 2, filterButtonY, buttonWidth, buttonHeight);
 }
 
 void NewPluginSkeletonAudioProcessorEditor::timerCallback()
