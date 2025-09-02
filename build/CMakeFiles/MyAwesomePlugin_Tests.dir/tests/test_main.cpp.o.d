@@ -1322,4 +1322,52 @@ CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.o: \
   /Users/frankyredente/JUCE/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h \
   /Users/frankyredente/JUCE/modules/juce_audio_processors/utilities/juce_PluginHostType.h \
   /Users/frankyredente/JUCE/modules/juce_audio_processors/utilities/ARA/juce_ARADebug.h \
-  /Users/frankyredente/JUCE/modules/juce_audio_processors/utilities/ARA/juce_ARA_utils.h
+  /Users/frankyredente/JUCE/modules/juce_audio_processors/utilities/ARA/juce_ARA_utils.h \
+  /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/juce_modules_test.cpp \
+  /Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/arm_neon.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/arm_bf16.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/complex \
+  /Users/frankyredente/JUCE/modules/juce_dsp/native/juce_SIMDNativeOps_fallback.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/native/juce_SIMDNativeOps_neon.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/containers/juce_SIMDRegister.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/containers/juce_SIMDRegister_Impl.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/maths/juce_SpecialFunctions.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/maths/juce_Matrix.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/maths/juce_Phase.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/maths/juce_Polynomial.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/maths/juce_FastMathApproximations.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/maths/juce_LookupTable.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/maths/juce_LogRampedValue.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/containers/juce_AudioBlock.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/processors/juce_ProcessContext.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/processors/juce_ProcessorWrapper.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/processors/juce_ProcessorChain.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/processors/juce_ProcessorDuplicator.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/processors/juce_IIRFilter.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/processors/juce_IIRFilter_Impl.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/processors/juce_FIRFilter.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/processors/juce_StateVariableFilter.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/processors/juce_FirstOrderTPTFilter.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/processors/juce_Panner.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/processors/juce_DelayLine.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/processors/juce_Oversampling.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/processors/juce_BallisticsFilter.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/processors/juce_LinkwitzRileyFilter.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/processors/juce_DryWetMixer.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/processors/juce_StateVariableTPTFilter.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/frequency/juce_FFT.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/frequency/juce_Convolution.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/frequency/juce_Windowing.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/filter_design/juce_FilterDesign.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/widgets/juce_Reverb.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/widgets/juce_Bias.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/widgets/juce_Gain.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/widgets/juce_WaveShaper.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/widgets/juce_Oscillator.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/widgets/juce_LadderFilter.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/widgets/juce_Compressor.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/widgets/juce_NoiseGate.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/widgets/juce_Limiter.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/widgets/juce_Phaser.h \
+  /Users/frankyredente/JUCE/modules/juce_dsp/widgets/juce_Chorus.h

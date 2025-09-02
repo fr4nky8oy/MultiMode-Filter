@@ -1144,6 +1144,30 @@ tests/install_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/install_test.cpp.s
 .PHONY : tests/install_test.cpp.s
 
+tests/juce_modules_test.o: tests/juce_modules_test.cpp.o
+.PHONY : tests/juce_modules_test.o
+
+# target to build an object file
+tests/juce_modules_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/juce_modules_test.cpp.o
+.PHONY : tests/juce_modules_test.cpp.o
+
+tests/juce_modules_test.i: tests/juce_modules_test.cpp.i
+.PHONY : tests/juce_modules_test.i
+
+# target to preprocess a source file
+tests/juce_modules_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/juce_modules_test.cpp.i
+.PHONY : tests/juce_modules_test.cpp.i
+
+tests/juce_modules_test.s: tests/juce_modules_test.cpp.s
+.PHONY : tests/juce_modules_test.s
+
+# target to generate assembly for a file
+tests/juce_modules_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/juce_modules_test.cpp.s
+.PHONY : tests/juce_modules_test.cpp.s
+
 tests/param_validation_test.o: tests/param_validation_test.cpp.o
 .PHONY : tests/param_validation_test.o
 
@@ -1361,6 +1385,9 @@ help:
 	@echo "... tests/install_test.o"
 	@echo "... tests/install_test.i"
 	@echo "... tests/install_test.s"
+	@echo "... tests/juce_modules_test.o"
+	@echo "... tests/juce_modules_test.i"
+	@echo "... tests/juce_modules_test.s"
 	@echo "... tests/param_validation_test.o"
 	@echo "... tests/param_validation_test.i"
 	@echo "... tests/param_validation_test.s"

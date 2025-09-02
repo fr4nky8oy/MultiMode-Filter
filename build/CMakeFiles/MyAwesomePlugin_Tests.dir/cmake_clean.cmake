@@ -35,6 +35,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.o.d"
   "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/install_test.cpp.o"
   "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/install_test.cpp.o.d"
+  "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/juce_modules_test.cpp.o"
+  "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/juce_modules_test.cpp.o.d"
   "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/param_validation_test.cpp.o"
   "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/param_validation_test.cpp.o.d"
   "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/pluginval_test.cpp.o"
