@@ -86,10 +86,24 @@ CMakeFiles/MyAwesomePlugin_Tests.dir/tests/build_config_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyAwesomePlugin_Tests.dir/tests/build_config_test.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/build_config_test.cpp -o CMakeFiles/MyAwesomePlugin_Tests.dir/tests/build_config_test.cpp.s
 
+CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.o: CMakeFiles/MyAwesomePlugin_Tests.dir/flags.make
+CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.o: /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/compile_test.cpp
+CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.o: CMakeFiles/MyAwesomePlugin_Tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.o -MF CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.o.d -o CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.o -c /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/compile_test.cpp
+
+CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/compile_test.cpp > CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.i
+
+CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/compile_test.cpp -o CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.s
+
 CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.o: CMakeFiles/MyAwesomePlugin_Tests.dir/flags.make
 CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.o: /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/test_main.cpp
 CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.o: CMakeFiles/MyAwesomePlugin_Tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.o -MF CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.o.d -o CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.o -c /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/test_main.cpp
 
 CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.i: cmake_force
@@ -103,7 +117,7 @@ CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.s: cmake_force
 CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o: CMakeFiles/MyAwesomePlugin_Tests.dir/flags.make
 CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o: /Users/frankyredente/JUCE/modules/juce_core/juce_core_CompilationTime.cpp
 CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o: CMakeFiles/MyAwesomePlugin_Tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o -MF CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o.d -o CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o -c /Users/frankyredente/JUCE/modules/juce_core/juce_core_CompilationTime.cpp
 
 CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.i: cmake_force
@@ -117,7 +131,7 @@ CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/
 CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core.mm.o: CMakeFiles/MyAwesomePlugin_Tests.dir/flags.make
 CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core.mm.o: /Users/frankyredente/JUCE/modules/juce_core/juce_core.mm
 CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core.mm.o: CMakeFiles/MyAwesomePlugin_Tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core.mm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core.mm.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core.mm.o -MF CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core.mm.o.d -o CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core.mm.o -c /Users/frankyredente/JUCE/modules/juce_core/juce_core.mm
 
 CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core.mm.i: cmake_force
@@ -131,7 +145,7 @@ CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/
 CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_basics/juce_audio_basics.mm.o: CMakeFiles/MyAwesomePlugin_Tests.dir/flags.make
 CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_basics/juce_audio_basics.mm.o: /Users/frankyredente/JUCE/modules/juce_audio_basics/juce_audio_basics.mm
 CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_basics/juce_audio_basics.mm.o: CMakeFiles/MyAwesomePlugin_Tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_basics/juce_audio_basics.mm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_basics/juce_audio_basics.mm.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_basics/juce_audio_basics.mm.o -MF CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_basics/juce_audio_basics.mm.o.d -o CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_basics/juce_audio_basics.mm.o -c /Users/frankyredente/JUCE/modules/juce_audio_basics/juce_audio_basics.mm
 
 CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_basics/juce_audio_basics.mm.i: cmake_force
@@ -145,7 +159,7 @@ CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio
 CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm.o: CMakeFiles/MyAwesomePlugin_Tests.dir/flags.make
 CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm.o: /Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm
 CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm.o: CMakeFiles/MyAwesomePlugin_Tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm.o -MF CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm.o.d -o CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm.o -c /Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm
 
 CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm.i: cmake_force
@@ -159,7 +173,7 @@ CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_dsp/j
 CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o: CMakeFiles/MyAwesomePlugin_Tests.dir/flags.make
 CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o: /Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm
 CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o: CMakeFiles/MyAwesomePlugin_Tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o -MF CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o.d -o CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o -c /Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm
 
 CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.i: cmake_force
@@ -173,6 +187,7 @@ CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio
 # Object files for target MyAwesomePlugin_Tests
 MyAwesomePlugin_Tests_OBJECTS = \
 "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/build_config_test.cpp.o" \
+"CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.o" \
 "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.o" \
 "CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o" \
 "CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core.mm.o" \
@@ -184,6 +199,7 @@ MyAwesomePlugin_Tests_OBJECTS = \
 MyAwesomePlugin_Tests_EXTERNAL_OBJECTS =
 
 MyAwesomePlugin_Tests: CMakeFiles/MyAwesomePlugin_Tests.dir/tests/build_config_test.cpp.o
+MyAwesomePlugin_Tests: CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.o
 MyAwesomePlugin_Tests: CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.o
 MyAwesomePlugin_Tests: CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o
 MyAwesomePlugin_Tests: CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core.mm.o
@@ -192,7 +208,7 @@ MyAwesomePlugin_Tests: CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/
 MyAwesomePlugin_Tests: CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o
 MyAwesomePlugin_Tests: CMakeFiles/MyAwesomePlugin_Tests.dir/build.make
 MyAwesomePlugin_Tests: CMakeFiles/MyAwesomePlugin_Tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable MyAwesomePlugin_Tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable MyAwesomePlugin_Tests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyAwesomePlugin_Tests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

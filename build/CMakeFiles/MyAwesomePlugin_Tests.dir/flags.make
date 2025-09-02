@@ -6,7 +6,7 @@ CXX_DEFINES = -DJUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1 -DJUCE_MODULE_AVAILABLE_j
 
 CXX_INCLUDES = -I/Users/frankyredente/JUCE/modules
 
-CXX_FLAGSarm64 = -std=gnu++17 -arch arm64
+CXX_FLAGSarm64 =  -std=c++17 -std=gnu++17 -arch arm64
 
-CXX_FLAGS = -std=gnu++17 -arch arm64
+CXX_FLAGS =  -std=c++17 -std=gnu++17 -arch arm64
 

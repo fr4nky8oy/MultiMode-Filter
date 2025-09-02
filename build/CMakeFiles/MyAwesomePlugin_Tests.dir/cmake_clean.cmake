@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm.o.d"
   "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/build_config_test.cpp.o"
   "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/build_config_test.cpp.o.d"
+  "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.o"
+  "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.o.d"
   "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.o"
   "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.o.d"
   "MyAwesomePlugin_Tests"

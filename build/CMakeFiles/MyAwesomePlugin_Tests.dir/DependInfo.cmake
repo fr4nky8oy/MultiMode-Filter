@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/frankyredente/JUCE/modules/juce_core/juce_core_CompilationTime.cpp" "CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o" "gcc" "CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core_CompilationTime.cpp.o.d"
   "/Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm" "CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm.o" "gcc" "CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm.o.d"
   "/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/build_config_test.cpp" "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/build_config_test.cpp.o" "gcc" "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/build_config_test.cpp.o.d"
+  "/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/compile_test.cpp" "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.o" "gcc" "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.o.d"
   "/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/test_main.cpp" "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.o" "gcc" "CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.o.d"
   )
 

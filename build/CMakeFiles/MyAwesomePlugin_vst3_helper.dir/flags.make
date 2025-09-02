@@ -6,7 +6,7 @@ CXX_DEFINES = -DJUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1 -DJUCE_MODULE_AVAILABLE_j
 
 CXX_INCLUDES = -I/Users/frankyredente/JUCE/modules/juce_audio_processors/format_types/VST3_SDK -I/Users/frankyredente/JUCE/modules -I/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/MyAwesomePlugin_artefacts/JuceLibraryCode -I/Users/frankyredente/JUCE/modules/juce_audio_processors/format_types/LV2_SDK -I/Users/frankyredente/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/lv2 -I/Users/frankyredente/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/serd -I/Users/frankyredente/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/sord -I/Users/frankyredente/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/sord/src -I/Users/frankyredente/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/sratom -I/Users/frankyredente/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/lilv -I/Users/frankyredente/JUCE/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
 
-CXX_FLAGSarm64 = -std=gnu++17 -arch arm64
+CXX_FLAGSarm64 =  -std=c++17 -std=gnu++17 -arch arm64
 
-CXX_FLAGS = -std=gnu++17 -arch arm64
+CXX_FLAGS =  -std=c++17 -std=gnu++17 -arch arm64
 
