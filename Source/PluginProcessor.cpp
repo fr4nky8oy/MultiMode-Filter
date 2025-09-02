@@ -295,12 +295,20 @@ void NewPluginSkeletonAudioProcessor::processBlock (juce::AudioBuffer<float>& bu
 //==============================================================================
 bool NewPluginSkeletonAudioProcessor::hasEditor() const
 {
-    return true; // (change this to false if you choose to not supply an editor)
+#if JUCE_UNIT_TESTS
+    return false; // No editor for unit tests
+#else
+    return true;
+#endif
 }
 
 juce::AudioProcessorEditor* NewPluginSkeletonAudioProcessor::createEditor()
 {
+#if JUCE_UNIT_TESTS
+    return nullptr;  // No editor for unit tests
+#else
     return new NewPluginSkeletonAudioProcessorEditor (*this);
+#endif
 }
 
 //==============================================================================
