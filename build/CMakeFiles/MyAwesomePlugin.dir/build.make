@@ -282,24 +282,10 @@ CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_basic
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_basics/juce_audio_basics.mm.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/frankyredente/JUCE/modules/juce_audio_basics/juce_audio_basics.mm -o CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_basics/juce_audio_basics.mm.s
 
-CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o: CMakeFiles/MyAwesomePlugin.dir/flags.make
-CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o: /Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm
-CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o: CMakeFiles/MyAwesomePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o -MF CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o.d -o CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o -c /Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm
-
-CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm > CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.i
-
-CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm -o CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.s
-
 CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o: CMakeFiles/MyAwesomePlugin.dir/flags.make
 CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o: /Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm
 CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o: CMakeFiles/MyAwesomePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o -MF CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o.d -o CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o -c /Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm
 
 CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.i: cmake_force
@@ -313,7 +299,7 @@ CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_forma
 CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.o: CMakeFiles/MyAwesomePlugin.dir/flags.make
 CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.o: /Users/frankyredente/JUCE/modules/juce_audio_utils/juce_audio_utils.mm
 CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.o: CMakeFiles/MyAwesomePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.o -MF CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.o.d -o CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.o -c /Users/frankyredente/JUCE/modules/juce_audio_utils/juce_audio_utils.mm
 
 CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.i: cmake_force
@@ -323,6 +309,20 @@ CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_utils
 CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/frankyredente/JUCE/modules/juce_audio_utils/juce_audio_utils.mm -o CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.s
+
+CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o: CMakeFiles/MyAwesomePlugin.dir/flags.make
+CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o: /Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm
+CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o: CMakeFiles/MyAwesomePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o -MF CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o.d -o CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o -c /Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm
+
+CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm > CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.i
+
+CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm -o CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.s
 
 CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm.o: CMakeFiles/MyAwesomePlugin.dir/flags.make
 CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm.o: /Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm
@@ -355,9 +355,9 @@ MyAwesomePlugin_OBJECTS = \
 "CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core.mm.o" \
 "CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.mm.o" \
 "CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_basics/juce_audio_basics.mm.o" \
-"CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o" \
 "CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o" \
 "CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.o" \
+"CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o" \
 "CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm.o"
 
 # External object files for target MyAwesomePlugin
@@ -378,9 +378,9 @@ MyAwesomePlugin_artefacts/libMyAwesome\ Filter_SharedCode.a: CMakeFiles/MyAwesom
 MyAwesomePlugin_artefacts/libMyAwesome\ Filter_SharedCode.a: CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_core/juce_core.mm.o
 MyAwesomePlugin_artefacts/libMyAwesome\ Filter_SharedCode.a: CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.mm.o
 MyAwesomePlugin_artefacts/libMyAwesome\ Filter_SharedCode.a: CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_basics/juce_audio_basics.mm.o
-MyAwesomePlugin_artefacts/libMyAwesome\ Filter_SharedCode.a: CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o
 MyAwesomePlugin_artefacts/libMyAwesome\ Filter_SharedCode.a: CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_formats/juce_audio_formats.mm.o
 MyAwesomePlugin_artefacts/libMyAwesome\ Filter_SharedCode.a: CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.o
+MyAwesomePlugin_artefacts/libMyAwesome\ Filter_SharedCode.a: CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_devices/juce_audio_devices.mm.o
 MyAwesomePlugin_artefacts/libMyAwesome\ Filter_SharedCode.a: CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm.o
 MyAwesomePlugin_artefacts/libMyAwesome\ Filter_SharedCode.a: CMakeFiles/MyAwesomePlugin.dir/build.make
 MyAwesomePlugin_artefacts/libMyAwesome\ Filter_SharedCode.a: CMakeFiles/MyAwesomePlugin.dir/link.txt

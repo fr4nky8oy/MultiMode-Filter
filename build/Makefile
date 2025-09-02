@@ -1072,6 +1072,30 @@ Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.s
 .PHONY : Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.s
 
+tests/basic_filter_test.o: tests/basic_filter_test.cpp.o
+.PHONY : tests/basic_filter_test.o
+
+# target to build an object file
+tests/basic_filter_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/basic_filter_test.cpp.o
+.PHONY : tests/basic_filter_test.cpp.o
+
+tests/basic_filter_test.i: tests/basic_filter_test.cpp.i
+.PHONY : tests/basic_filter_test.i
+
+# target to preprocess a source file
+tests/basic_filter_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/basic_filter_test.cpp.i
+.PHONY : tests/basic_filter_test.cpp.i
+
+tests/basic_filter_test.s: tests/basic_filter_test.cpp.s
+.PHONY : tests/basic_filter_test.s
+
+# target to generate assembly for a file
+tests/basic_filter_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/basic_filter_test.cpp.s
+.PHONY : tests/basic_filter_test.cpp.s
+
 tests/build_config_test.o: tests/build_config_test.cpp.o
 .PHONY : tests/build_config_test.o
 
@@ -1191,6 +1215,54 @@ tests/param_validation_test.s: tests/param_validation_test.cpp.s
 tests/param_validation_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/param_validation_test.cpp.s
 .PHONY : tests/param_validation_test.cpp.s
+
+tests/parameter_layout_test.o: tests/parameter_layout_test.cpp.o
+.PHONY : tests/parameter_layout_test.o
+
+# target to build an object file
+tests/parameter_layout_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/parameter_layout_test.cpp.o
+.PHONY : tests/parameter_layout_test.cpp.o
+
+tests/parameter_layout_test.i: tests/parameter_layout_test.cpp.i
+.PHONY : tests/parameter_layout_test.i
+
+# target to preprocess a source file
+tests/parameter_layout_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/parameter_layout_test.cpp.i
+.PHONY : tests/parameter_layout_test.cpp.i
+
+tests/parameter_layout_test.s: tests/parameter_layout_test.cpp.s
+.PHONY : tests/parameter_layout_test.s
+
+# target to generate assembly for a file
+tests/parameter_layout_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/parameter_layout_test.cpp.s
+.PHONY : tests/parameter_layout_test.cpp.s
+
+tests/parameter_smoothing_test.o: tests/parameter_smoothing_test.cpp.o
+.PHONY : tests/parameter_smoothing_test.o
+
+# target to build an object file
+tests/parameter_smoothing_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/parameter_smoothing_test.cpp.o
+.PHONY : tests/parameter_smoothing_test.cpp.o
+
+tests/parameter_smoothing_test.i: tests/parameter_smoothing_test.cpp.i
+.PHONY : tests/parameter_smoothing_test.i
+
+# target to preprocess a source file
+tests/parameter_smoothing_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/parameter_smoothing_test.cpp.i
+.PHONY : tests/parameter_smoothing_test.cpp.i
+
+tests/parameter_smoothing_test.s: tests/parameter_smoothing_test.cpp.s
+.PHONY : tests/parameter_smoothing_test.s
+
+# target to generate assembly for a file
+tests/parameter_smoothing_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/parameter_smoothing_test.cpp.s
+.PHONY : tests/parameter_smoothing_test.cpp.s
 
 tests/pluginval_test.o: tests/pluginval_test.cpp.o
 .PHONY : tests/pluginval_test.o
@@ -1376,6 +1448,9 @@ help:
 	@echo "... Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.o"
 	@echo "... Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.i"
 	@echo "... Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.s"
+	@echo "... tests/basic_filter_test.o"
+	@echo "... tests/basic_filter_test.i"
+	@echo "... tests/basic_filter_test.s"
 	@echo "... tests/build_config_test.o"
 	@echo "... tests/build_config_test.i"
 	@echo "... tests/build_config_test.s"
@@ -1391,6 +1466,12 @@ help:
 	@echo "... tests/param_validation_test.o"
 	@echo "... tests/param_validation_test.i"
 	@echo "... tests/param_validation_test.s"
+	@echo "... tests/parameter_layout_test.o"
+	@echo "... tests/parameter_layout_test.i"
+	@echo "... tests/parameter_layout_test.s"
+	@echo "... tests/parameter_smoothing_test.o"
+	@echo "... tests/parameter_smoothing_test.i"
+	@echo "... tests/parameter_smoothing_test.s"
 	@echo "... tests/pluginval_test.o"
 	@echo "... tests/pluginval_test.i"
 	@echo "... tests/pluginval_test.s"
