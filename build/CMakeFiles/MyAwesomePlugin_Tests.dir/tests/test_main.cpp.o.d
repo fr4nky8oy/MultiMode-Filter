@@ -1371,4 +1371,5 @@ CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.o: \
   /Users/frankyredente/JUCE/modules/juce_dsp/widgets/juce_Limiter.h \
   /Users/frankyredente/JUCE/modules/juce_dsp/widgets/juce_Phaser.h \
   /Users/frankyredente/JUCE/modules/juce_dsp/widgets/juce_Chorus.h \
-  /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/parameter_layout_test.cpp
+  /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/parameter_layout_test.cpp \
+  /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/parameter_smoothing_test.cpp
