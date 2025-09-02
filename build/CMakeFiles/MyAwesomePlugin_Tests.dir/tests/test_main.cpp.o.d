@@ -969,4 +969,5 @@ CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.o: \
   /Users/frankyredente/JUCE/modules/juce_core/detail/juce_LruCache.h \
   /Users/frankyredente/JUCE/modules/juce_core/unit_tests/juce_UnitTestCategories.h \
   /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/build_config_test.cpp \
-  /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/compile_test.cpp
+  /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/compile_test.cpp \
+  /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/install_test.cpp
