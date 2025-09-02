@@ -971,4 +971,5 @@ CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.o: \
   /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/build_config_test.cpp \
   /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/compile_test.cpp \
   /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/install_test.cpp \
-  /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/pluginval_test.cpp
+  /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/pluginval_test.cpp \
+  /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/test_runner.cpp
