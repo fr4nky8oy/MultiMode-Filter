@@ -172,6 +172,11 @@ private:
     juce::Label slopeLabel;
     juce::Label filterTypeLabel;
     
+    // Preset management components
+    juce::ComboBox presetComboBox;
+    juce::TextButton savePresetButton;
+    juce::TextButton loadPresetButton;
+    
     // Parameter attachments
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> cutoffAttachment;
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> resonanceAttachment;
@@ -184,6 +189,15 @@ private:
     juce::String formatCutoffValue(float value);
     juce::String formatResonanceValue(float value);
     juce::String formatGainValue(float value);
+    
+    // Preset management methods
+    void savePreset();
+    void loadPreset();
+    void updatePresetComboBox();
+    juce::File getPresetDirectory();
+    void createPresetDirectory();
+    juce::String getCurrentPresetName();
+    void setCurrentPresetName(const juce::String& name);
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (NewPluginSkeletonAudioProcessorEditor)
 };

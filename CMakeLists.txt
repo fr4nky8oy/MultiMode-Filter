@@ -19,7 +19,7 @@ juce_add_plugin(MyAwesomePlugin
     PLUGIN_MANUFACTURER_CODE "AWSM"
     PLUGIN_CODE "Awsm"
     FORMATS VST3 AU
-    PRODUCT_NAME "MyAwesome Filter"
+    PRODUCT_NAME "Franky's Filters"
     COMPANY_NAME "Awesome Audio Co"
     BUNDLE_ID "com.awesome.myawesomeplugin"
     IS_SYNTH FALSE
@@ -99,7 +99,7 @@ if(TEST_SOURCES)
         JUCE_WEB_BROWSER=0
         JUCE_USE_CURL=0
         JUCE_UNIT_TESTS=1
-        JucePlugin_Name="MyAwesome Filter"
+        JucePlugin_Name="Franky's Filters"
         JucePlugin_Desc="Low-pass filter plugin"
         JucePlugin_Manufacturer="Awesome Audio Co"
         JucePlugin_ManufacturerWebsite=""

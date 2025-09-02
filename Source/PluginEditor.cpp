@@ -22,10 +22,44 @@ NewPluginSkeletonAudioProcessorEditor::NewPluginSkeletonAudioProcessorEditor (Ne
     setResizeLimits(400, 300, 800, 600);
     
     // Title label
-    titleLabel.setText("MyAwesome Filter", juce::dontSendNotification);
+    titleLabel.setText("Franky's Filters", juce::dontSendNotification);
     titleLabel.setFont(juce::Font(24.0f, juce::Font::bold));
-    titleLabel.setJustificationType(juce::Justification::centred);
+    titleLabel.setJustificationType(juce::Justification::centredLeft);
     addAndMakeVisible(titleLabel);
+    
+    // Preset management components
+    presetComboBox.setTextWhenNoChoicesAvailable("No Presets");
+    presetComboBox.setTextWhenNothingSelected("Select Preset...");
+    addAndMakeVisible(presetComboBox);
+    
+    savePresetButton.setButtonText("Save");
+    savePresetButton.onClick = [this]() { savePreset(); };
+    addAndMakeVisible(savePresetButton);
+    
+    loadPresetButton.setButtonText("Load");
+    loadPresetButton.onClick = [this]() { loadPreset(); };
+    addAndMakeVisible(loadPresetButton);
+    
+    presetComboBox.onChange = [this]() {
+        if (presetComboBox.getSelectedItemIndex() >= 0)
+        {
+            auto presetName = presetComboBox.getItemText(presetComboBox.getSelectedItemIndex());
+            auto presetFile = getPresetDirectory().getChildFile(presetName + ".xml");
+            if (presetFile.existsAsFile())
+            {
+                auto xml = juce::parseXML(presetFile);
+                if (xml != nullptr)
+                {
+                    auto valueTree = juce::ValueTree::fromXml(*xml);
+                    audioProcessor.parameters.replaceState(valueTree);
+                }
+            }
+        }
+    };
+    
+    // Create preset directory and update combo box
+    createPresetDirectory();
+    updatePresetComboBox();
     
     // Cutoff slider
     cutoffSlider.setSliderStyle(juce::Slider::RotaryVerticalDrag);
@@ -200,13 +234,23 @@ void NewPluginSkeletonAudioProcessorEditor::resized()
 {
     const int margin = 20;
     const int titleHeight = 40;
+    const int presetHeight = 25;
+    const int presetButtonWidth = 60;
     const int knobSize = 100;
     const int labelHeight = 20;
     const int buttonHeight = 30;
     const int buttonWidth = 80;
     
-    // Title
-    titleLabel.setBounds(margin, margin, getWidth() - margin * 2, titleHeight);
+    // Title and preset section
+    const int titleWidth = 200;
+    titleLabel.setBounds(margin, margin, titleWidth, titleHeight);
+    
+    // Preset controls on the right side of title
+    const int presetStartX = margin + titleWidth + 20;
+    const int presetComboWidth = 150;
+    presetComboBox.setBounds(presetStartX, margin + 8, presetComboWidth, presetHeight);
+    savePresetButton.setBounds(presetStartX + presetComboWidth + 10, margin + 8, presetButtonWidth, presetHeight);
+    loadPresetButton.setBounds(presetStartX + presetComboWidth + presetButtonWidth + 20, margin + 8, presetButtonWidth, presetHeight);
     
     // Calculate knob positions
     const int knobY = margin + titleHeight + 20;
@@ -275,4 +319,123 @@ juce::String NewPluginSkeletonAudioProcessorEditor::formatResonanceValue(float v
 juce::String NewPluginSkeletonAudioProcessorEditor::formatGainValue(float value)
 {
     return juce::String(value, 1) + " dB";
+}
+
+void NewPluginSkeletonAudioProcessorEditor::savePreset()
+{
+    // Simple approach - use a generated timestamp as preset name for now
+    auto timestamp = juce::Time::getCurrentTime().formatted("%Y%m%d_%H%M%S");
+    auto presetName = "Preset_" + timestamp;
+    
+    auto presetFile = getPresetDirectory().getChildFile(presetName + ".xml");
+    
+    // Get current state from processor
+    auto state = audioProcessor.parameters.copyState();
+    auto xml = state.createXml();
+    
+    if (xml != nullptr && xml->writeTo(presetFile))
+    {
+        updatePresetComboBox();
+        
+        // Select the newly saved preset
+        for (int i = 0; i < presetComboBox.getNumItems(); ++i)
+        {
+            if (presetComboBox.getItemText(i) == presetName)
+            {
+                presetComboBox.setSelectedItemIndex(i, juce::dontSendNotification);
+                break;
+            }
+        }
+    }
+}
+
+void NewPluginSkeletonAudioProcessorEditor::loadPreset()
+{
+    auto chooser = std::make_unique<juce::FileChooser>("Load Preset", getPresetDirectory(), "*.xml");
+    
+    chooser->launchAsync(juce::FileBrowserComponent::openMode | juce::FileBrowserComponent::canSelectFiles,
+                        [this](const juce::FileChooser& fc)
+                        {
+                            auto file = fc.getResult();
+                            if (file != juce::File{})
+                            {
+                                auto xml = juce::parseXML(file);
+                                
+                                if (xml != nullptr)
+                                {
+                                    auto valueTree = juce::ValueTree::fromXml(*xml);
+                                    audioProcessor.parameters.replaceState(valueTree);
+                                    
+                                    // Update combo box selection
+                                    auto presetName = file.getFileNameWithoutExtension();
+                                    for (int i = 0; i < presetComboBox.getNumItems(); ++i)
+                                    {
+                                        if (presetComboBox.getItemText(i) == presetName)
+                                        {
+                                            presetComboBox.setSelectedItemIndex(i, juce::dontSendNotification);
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                        });
+}
+
+void NewPluginSkeletonAudioProcessorEditor::updatePresetComboBox()
+{
+    presetComboBox.clear(juce::dontSendNotification);
+    
+    auto presetDir = getPresetDirectory();
+    if (presetDir.exists())
+    {
+        juce::Array<juce::File> presetFiles;
+        presetDir.findChildFiles(presetFiles, juce::File::findFiles, false, "*.xml");
+        
+        for (const auto& file : presetFiles)
+        {
+            presetComboBox.addItem(file.getFileNameWithoutExtension(), presetComboBox.getNumItems() + 1);
+        }
+    }
+}
+
+juce::File NewPluginSkeletonAudioProcessorEditor::getPresetDirectory()
+{
+    auto appDataDir = juce::File::getSpecialLocation(juce::File::userApplicationDataDirectory);
+    
+#if JUCE_MAC
+    return appDataDir.getChildFile("Audio/Presets/Franky's Filters");
+#elif JUCE_WINDOWS  
+    return appDataDir.getChildFile("Franky's Filters/Presets");
+#else
+    return appDataDir.getChildFile(".FrankysFilters/Presets");
+#endif
+}
+
+void NewPluginSkeletonAudioProcessorEditor::createPresetDirectory()
+{
+    auto presetDir = getPresetDirectory();
+    if (!presetDir.exists())
+    {
+        presetDir.createDirectory();
+    }
+}
+
+juce::String NewPluginSkeletonAudioProcessorEditor::getCurrentPresetName()
+{
+    auto selectedIndex = presetComboBox.getSelectedItemIndex();
+    if (selectedIndex >= 0)
+        return presetComboBox.getItemText(selectedIndex);
+    return juce::String();
+}
+
+void NewPluginSkeletonAudioProcessorEditor::setCurrentPresetName(const juce::String& name)
+{
+    for (int i = 0; i < presetComboBox.getNumItems(); ++i)
+    {
+        if (presetComboBox.getItemText(i) == name)
+        {
+            presetComboBox.setSelectedItemIndex(i, juce::dontSendNotification);
+            break;
+        }
+    }
 }
