@@ -280,7 +280,7 @@ CMakeFiles/MyAwesomePlugin_VST3.dir/all: CMakeFiles/MyAwesomePlugin.dir/all
 CMakeFiles/MyAwesomePlugin_VST3.dir/all: CMakeFiles/MyAwesomePlugin_vst3_helper.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_VST3.dir/build.make CMakeFiles/MyAwesomePlugin_VST3.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_VST3.dir/build.make CMakeFiles/MyAwesomePlugin_VST3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=43,44,45,46,47,48,49,50,51,52,53,54,55 "Built target MyAwesomePlugin_VST3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=57,58,59,60,61,62,63,64,65,66,67,68,69 "Built target MyAwesomePlugin_VST3"
 .PHONY : CMakeFiles/MyAwesomePlugin_VST3.dir/all
 
 # Build rule for subdir invocation for target.
@@ -297,7 +297,7 @@ MyAwesomePlugin_VST3: CMakeFiles/MyAwesomePlugin_VST3.dir/rule
 # codegen rule for target.
 CMakeFiles/MyAwesomePlugin_VST3.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_VST3.dir/build.make CMakeFiles/MyAwesomePlugin_VST3.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=43,44,45,46,47,48,49,50,51,52,53,54,55 "Finished codegen for target MyAwesomePlugin_VST3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=57,58,59,60,61,62,63,64,65,66,67,68,69 "Finished codegen for target MyAwesomePlugin_VST3"
 .PHONY : CMakeFiles/MyAwesomePlugin_VST3.dir/codegen
 
 # clean rule for target.
@@ -312,7 +312,7 @@ CMakeFiles/MyAwesomePlugin_VST3.dir/clean:
 CMakeFiles/MyAwesomePlugin_vst3_helper.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_vst3_helper.dir/build.make CMakeFiles/MyAwesomePlugin_vst3_helper.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_vst3_helper.dir/build.make CMakeFiles/MyAwesomePlugin_vst3_helper.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=56,57 "Built target MyAwesomePlugin_vst3_helper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=70,71 "Built target MyAwesomePlugin_vst3_helper"
 .PHONY : CMakeFiles/MyAwesomePlugin_vst3_helper.dir/all
 
 # Build rule for subdir invocation for target.
@@ -329,7 +329,7 @@ MyAwesomePlugin_vst3_helper: CMakeFiles/MyAwesomePlugin_vst3_helper.dir/rule
 # codegen rule for target.
 CMakeFiles/MyAwesomePlugin_vst3_helper.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_vst3_helper.dir/build.make CMakeFiles/MyAwesomePlugin_vst3_helper.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=56,57 "Finished codegen for target MyAwesomePlugin_vst3_helper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=70,71 "Finished codegen for target MyAwesomePlugin_vst3_helper"
 .PHONY : CMakeFiles/MyAwesomePlugin_vst3_helper.dir/codegen
 
 # clean rule for target.
@@ -344,12 +344,12 @@ CMakeFiles/MyAwesomePlugin_vst3_helper.dir/clean:
 CMakeFiles/MyAwesomePlugin_Tests.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=34,35,36,37,38,39,40,41,42 "Built target MyAwesomePlugin_Tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56 "Built target MyAwesomePlugin_Tests"
 .PHONY : CMakeFiles/MyAwesomePlugin_Tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/MyAwesomePlugin_Tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MyAwesomePlugin_Tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles 0
 .PHONY : CMakeFiles/MyAwesomePlugin_Tests.dir/rule
@@ -361,7 +361,7 @@ MyAwesomePlugin_Tests: CMakeFiles/MyAwesomePlugin_Tests.dir/rule
 # codegen rule for target.
 CMakeFiles/MyAwesomePlugin_Tests.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=34,35,36,37,38,39,40,41,42 "Finished codegen for target MyAwesomePlugin_Tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/build/CMakeFiles --progress-num=34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56 "Finished codegen for target MyAwesomePlugin_Tests"
 .PHONY : CMakeFiles/MyAwesomePlugin_Tests.dir/codegen
 
 # clean rule for target.

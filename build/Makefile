@@ -703,6 +703,7 @@ Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors.o: 
 # target to build an object file
 Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors.mm.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors.mm.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors.mm.o
 .PHONY : Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors.mm.o
 
 Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors.i: Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors.mm.i
@@ -711,6 +712,7 @@ Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors.i: 
 # target to preprocess a source file
 Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors.mm.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors.mm.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors.mm.i
 .PHONY : Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors.mm.i
 
 Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors.s: Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors.mm.s
@@ -719,6 +721,7 @@ Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors.s: 
 # target to generate assembly for a file
 Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors.mm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors.mm.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors.mm.s
 .PHONY : Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors.mm.s
 
 Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.o: Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o
@@ -727,6 +730,7 @@ Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara
 # target to build an object file
 Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o
 .PHONY : Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o
 
 Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.i: Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.i
@@ -735,6 +739,7 @@ Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara
 # target to preprocess a source file
 Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.i
 .PHONY : Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.i
 
 Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.s: Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.s
@@ -743,6 +748,7 @@ Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara
 # target to generate assembly for a file
 Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.s
 .PHONY : Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_ara.cpp.s
 
 Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.o: Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o
@@ -751,6 +757,7 @@ Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2
 # target to build an object file
 Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o
 .PHONY : Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o
 
 Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.i: Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.i
@@ -759,6 +766,7 @@ Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2
 # target to preprocess a source file
 Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.i
 .PHONY : Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.i
 
 Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.s: Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.s
@@ -767,6 +775,7 @@ Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2
 # target to generate assembly for a file
 Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.s
 .PHONY : Users/frankyredente/JUCE/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.s
 
 Users/frankyredente/JUCE/modules/juce_audio_utils/juce_audio_utils.o: Users/frankyredente/JUCE/modules/juce_audio_utils/juce_audio_utils.mm.o
@@ -853,6 +862,7 @@ Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.o: Us
 # target to build an object file
 Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.mm.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.mm.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.mm.o
 .PHONY : Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.mm.o
 
 Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.i: Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.mm.i
@@ -861,6 +871,7 @@ Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.i: Us
 # target to preprocess a source file
 Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.mm.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.mm.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.mm.i
 .PHONY : Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.mm.i
 
 Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.s: Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.mm.s
@@ -869,6 +880,7 @@ Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.s: Us
 # target to generate assembly for a file
 Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.mm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.mm.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.mm.s
 .PHONY : Users/frankyredente/JUCE/modules/juce_data_structures/juce_data_structures.mm.s
 
 Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.o: Users/frankyredente/JUCE/modules/juce_dsp/juce_dsp.mm.o
@@ -904,6 +916,7 @@ Users/frankyredente/JUCE/modules/juce_events/juce_events.o: Users/frankyredente/
 # target to build an object file
 Users/frankyredente/JUCE/modules/juce_events/juce_events.mm.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_events/juce_events.mm.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_events/juce_events.mm.o
 .PHONY : Users/frankyredente/JUCE/modules/juce_events/juce_events.mm.o
 
 Users/frankyredente/JUCE/modules/juce_events/juce_events.i: Users/frankyredente/JUCE/modules/juce_events/juce_events.mm.i
@@ -912,6 +925,7 @@ Users/frankyredente/JUCE/modules/juce_events/juce_events.i: Users/frankyredente/
 # target to preprocess a source file
 Users/frankyredente/JUCE/modules/juce_events/juce_events.mm.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_events/juce_events.mm.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_events/juce_events.mm.i
 .PHONY : Users/frankyredente/JUCE/modules/juce_events/juce_events.mm.i
 
 Users/frankyredente/JUCE/modules/juce_events/juce_events.s: Users/frankyredente/JUCE/modules/juce_events/juce_events.mm.s
@@ -920,6 +934,7 @@ Users/frankyredente/JUCE/modules/juce_events/juce_events.s: Users/frankyredente/
 # target to generate assembly for a file
 Users/frankyredente/JUCE/modules/juce_events/juce_events.mm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_events/juce_events.mm.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_events/juce_events.mm.s
 .PHONY : Users/frankyredente/JUCE/modules/juce_events/juce_events.mm.s
 
 Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.o: Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.mm.o
@@ -928,6 +943,7 @@ Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.o: Users/frankyrede
 # target to build an object file
 Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.mm.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.mm.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.mm.o
 .PHONY : Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.mm.o
 
 Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.i: Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.mm.i
@@ -936,6 +952,7 @@ Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.i: Users/frankyrede
 # target to preprocess a source file
 Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.mm.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.mm.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.mm.i
 .PHONY : Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.mm.i
 
 Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.s: Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.mm.s
@@ -944,6 +961,7 @@ Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.s: Users/frankyrede
 # target to generate assembly for a file
 Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.mm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.mm.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.mm.s
 .PHONY : Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics.mm.s
 
 Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.o: Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o
@@ -952,6 +970,7 @@ Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.o: Users/f
 # target to build an object file
 Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o
 .PHONY : Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o
 
 Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.i: Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.i
@@ -960,6 +979,7 @@ Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.i: Users/f
 # target to preprocess a source file
 Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.i
 .PHONY : Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.i
 
 Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.s: Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.s
@@ -968,6 +988,7 @@ Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.s: Users/f
 # target to generate assembly for a file
 Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.s
 .PHONY : Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.s
 
 Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.o: Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.o
@@ -976,6 +997,7 @@ Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.o: Users/
 # target to build an object file
 Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.o
 .PHONY : Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.o
 
 Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.i: Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.i
@@ -984,6 +1006,7 @@ Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.i: Users/
 # target to preprocess a source file
 Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.i
 .PHONY : Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.i
 
 Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.s: Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.s
@@ -992,6 +1015,7 @@ Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.s: Users/
 # target to generate assembly for a file
 Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.s
 .PHONY : Users/frankyredente/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c.s
 
 Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.o: Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.o
@@ -1000,6 +1024,7 @@ Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.o: Users/franky
 # target to build an object file
 Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.o
 .PHONY : Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.o
 
 Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.i: Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.i
@@ -1008,6 +1033,7 @@ Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.i: Users/franky
 # target to preprocess a source file
 Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.i
 .PHONY : Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.i
 
 Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.s: Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.s
@@ -1016,6 +1042,7 @@ Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.s: Users/franky
 # target to generate assembly for a file
 Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.s
 .PHONY : Users/frankyredente/JUCE/modules/juce_gui_basics/juce_gui_basics.mm.s
 
 Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.o: Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.o
@@ -1024,6 +1051,7 @@ Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.o: Users/frankyre
 # target to build an object file
 Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.o
 .PHONY : Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.o
 
 Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.i: Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.i
@@ -1032,6 +1060,7 @@ Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.i: Users/frankyre
 # target to preprocess a source file
 Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.i
 .PHONY : Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.i
 
 Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.s: Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.s
@@ -1040,6 +1069,7 @@ Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.s: Users/frankyre
 # target to generate assembly for a file
 Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin.dir/build.make CMakeFiles/MyAwesomePlugin.dir/Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.s
 .PHONY : Users/frankyredente/JUCE/modules/juce_gui_extra/juce_gui_extra.mm.s
 
 tests/build_config_test.o: tests/build_config_test.cpp.o
@@ -1090,6 +1120,78 @@ tests/compile_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/compile_test.cpp.s
 .PHONY : tests/compile_test.cpp.s
 
+tests/install_test.o: tests/install_test.cpp.o
+.PHONY : tests/install_test.o
+
+# target to build an object file
+tests/install_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/install_test.cpp.o
+.PHONY : tests/install_test.cpp.o
+
+tests/install_test.i: tests/install_test.cpp.i
+.PHONY : tests/install_test.i
+
+# target to preprocess a source file
+tests/install_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/install_test.cpp.i
+.PHONY : tests/install_test.cpp.i
+
+tests/install_test.s: tests/install_test.cpp.s
+.PHONY : tests/install_test.s
+
+# target to generate assembly for a file
+tests/install_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/install_test.cpp.s
+.PHONY : tests/install_test.cpp.s
+
+tests/param_validation_test.o: tests/param_validation_test.cpp.o
+.PHONY : tests/param_validation_test.o
+
+# target to build an object file
+tests/param_validation_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/param_validation_test.cpp.o
+.PHONY : tests/param_validation_test.cpp.o
+
+tests/param_validation_test.i: tests/param_validation_test.cpp.i
+.PHONY : tests/param_validation_test.i
+
+# target to preprocess a source file
+tests/param_validation_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/param_validation_test.cpp.i
+.PHONY : tests/param_validation_test.cpp.i
+
+tests/param_validation_test.s: tests/param_validation_test.cpp.s
+.PHONY : tests/param_validation_test.s
+
+# target to generate assembly for a file
+tests/param_validation_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/param_validation_test.cpp.s
+.PHONY : tests/param_validation_test.cpp.s
+
+tests/pluginval_test.o: tests/pluginval_test.cpp.o
+.PHONY : tests/pluginval_test.o
+
+# target to build an object file
+tests/pluginval_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/pluginval_test.cpp.o
+.PHONY : tests/pluginval_test.cpp.o
+
+tests/pluginval_test.i: tests/pluginval_test.cpp.i
+.PHONY : tests/pluginval_test.i
+
+# target to preprocess a source file
+tests/pluginval_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/pluginval_test.cpp.i
+.PHONY : tests/pluginval_test.cpp.i
+
+tests/pluginval_test.s: tests/pluginval_test.cpp.s
+.PHONY : tests/pluginval_test.s
+
+# target to generate assembly for a file
+tests/pluginval_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/pluginval_test.cpp.s
+.PHONY : tests/pluginval_test.cpp.s
+
 tests/test_main.o: tests/test_main.cpp.o
 .PHONY : tests/test_main.o
 
@@ -1113,6 +1215,30 @@ tests/test_main.s: tests/test_main.cpp.s
 tests/test_main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.s
 .PHONY : tests/test_main.cpp.s
+
+tests/test_runner.o: tests/test_runner.cpp.o
+.PHONY : tests/test_runner.o
+
+# target to build an object file
+tests/test_runner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_runner.cpp.o
+.PHONY : tests/test_runner.cpp.o
+
+tests/test_runner.i: tests/test_runner.cpp.i
+.PHONY : tests/test_runner.i
+
+# target to preprocess a source file
+tests/test_runner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_runner.cpp.i
+.PHONY : tests/test_runner.cpp.i
+
+tests/test_runner.s: tests/test_runner.cpp.s
+.PHONY : tests/test_runner.s
+
+# target to generate assembly for a file
+tests/test_runner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyAwesomePlugin_Tests.dir/build.make CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_runner.cpp.s
+.PHONY : tests/test_runner.cpp.s
 
 # Help Target
 help:
@@ -1232,9 +1358,21 @@ help:
 	@echo "... tests/compile_test.o"
 	@echo "... tests/compile_test.i"
 	@echo "... tests/compile_test.s"
+	@echo "... tests/install_test.o"
+	@echo "... tests/install_test.i"
+	@echo "... tests/install_test.s"
+	@echo "... tests/param_validation_test.o"
+	@echo "... tests/param_validation_test.i"
+	@echo "... tests/param_validation_test.s"
+	@echo "... tests/pluginval_test.o"
+	@echo "... tests/pluginval_test.i"
+	@echo "... tests/pluginval_test.s"
 	@echo "... tests/test_main.o"
 	@echo "... tests/test_main.i"
 	@echo "... tests/test_main.s"
+	@echo "... tests/test_runner.o"
+	@echo "... tests/test_runner.i"
+	@echo "... tests/test_runner.s"
 .PHONY : help
 
 
