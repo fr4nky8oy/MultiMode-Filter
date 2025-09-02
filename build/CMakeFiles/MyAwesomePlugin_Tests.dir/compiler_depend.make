@@ -11332,7 +11332,8 @@ CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.o: /Users/frankyredente
   /Users/frankyredente/JUCE/modules/juce_core/zip/juce_ZipFile.h \
   /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/build_config_test.cpp \
   /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/compile_test.cpp \
-  /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/install_test.cpp
+  /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/install_test.cpp \
+  /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/pluginval_test.cpp
 
 
 /Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/install_test.cpp:
@@ -16118,6 +16119,8 @@ CMakeFiles/MyAwesomePlugin_Tests.dir/tests/test_main.cpp.o: /Users/frankyredente
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFMessagePort.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/AE.framework/Headers/AEDataModel.h:
+
+/Users/frankyredente/Music/Claude/VST_Vibe_Coding/MyAwesomePlugin/tests/pluginval_test.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/same_as.h:
 
