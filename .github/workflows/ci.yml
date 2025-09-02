@@ -1,0 +1,22 @@
+name: Build
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Ninja and pluginval
+        run: |
+          brew install ninja
+          brew install --cask pluginval
+      - name: Configure host-arch
+        run: cmake -Bbuild -G Ninja -DCMAKE_OSX_ARCHITECTURES=$(uname -m)
+      - name: Build
+        run: cmake --build build
+      - name: Run Smoke Build Gate
+        run: |
+          ./scripts/run_smoke.sh || exit 1
+      - name: Skip UI screenshot in CI
+        run: echo "UI capture skipped on headless runner"

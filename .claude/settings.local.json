@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(touch:*)",
+      "Bash(cd:*)",
+      "Bash(cat:*)",
+      "Bash(python:*)",
+      "Bash(python3:*)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs",
+      "Bash(cmake:*)",
+      "Bash(ls:*)",
+      "Bash(cp:*)",
+      "Bash(find:*)"
+    ],
+    "deny": []
+  }
+}
