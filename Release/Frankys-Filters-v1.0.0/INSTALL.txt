@@ -1,0 +1,41 @@
+FRANKY'S FILTERS v1.0.0 - INSTALLATION INSTRUCTIONS
+
+SYSTEM REQUIREMENTS:
+- macOS 10.13 or later
+- Audio Unit (AU) or VST3 compatible host application
+- Intel or Apple Silicon Mac
+
+INSTALLATION:
+
+Audio Unit (AU):
+1. Copy "Franky's Filters.component" from the AU folder
+2. Paste it into: ~/Library/Audio/Plug-Ins/Components/
+3. The full path should be: ~/Library/Audio/Plug-Ins/Components/Franky's Filters.component
+
+VST3:
+1. Copy "Franky's Filters.vst3" from the VST3 folder  
+2. Paste it into: ~/Library/Audio/Plug-Ins/VST3/
+3. The full path should be: ~/Library/Audio/Plug-Ins/VST3/Franky's Filters.vst3
+
+QUICK INSTALL (Terminal method):
+Open Terminal and run these commands:
+
+For AU:
+cp -r "AU/Franky's Filters.component" ~/Library/Audio/Plug-Ins/Components/
+
+For VST3:
+cp -r "VST3/Franky's Filters.vst3" ~/Library/Audio/Plug-Ins/VST3/
+
+VERIFICATION:
+1. Restart your DAW
+2. Scan for new plugins (if required)
+3. Look for "Franky's Filters" under "Awesome Audio Co"
+
+TROUBLESHOOTING:
+- If plugin doesn't appear, verify it's in the correct directory
+- Some DAWs require a manual plugin rescan
+- Check that your DAW supports AU or VST3 format
+
+For complete documentation, see Documentation/README.md
+
+Support: Create an issue at https://github.com/yourusername/frankys-filters

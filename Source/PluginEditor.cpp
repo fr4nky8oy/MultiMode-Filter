@@ -227,7 +227,7 @@ void NewPluginSkeletonAudioProcessorEditor::paint (juce::Graphics& g)
     
     // Draw section divider line (separates rotary controls from filter controls)
     g.setColour(juce::Colour(0xff4a5568));
-    const int dividerY = 280; // Match the position from resized()
+    const int dividerY = 260; // Match the position from resized()
     g.drawLine(20, dividerY, getWidth() - 20, dividerY, 2.0f);
     
     // Add subtle shadow below the line for depth
@@ -241,15 +241,15 @@ void NewPluginSkeletonAudioProcessorEditor::resized()
     const int titleHeight = 40;
     const int presetHeight = 25;
     const int presetButtonWidth = 60;
-    const int knobSize = 90;
+    const int knobSize = 100;
     const int labelHeight = 20;
     const int buttonHeight = 30;
-    const int buttonWidth = 80;
+    const int buttonWidth = 85;
     
     // Fixed dimensions for 600x450 window
     const int totalWidth = 600;
     const int totalHeight = 450;
-    const int dividerY = 280; // Position of the dividing line
+    const int dividerY = 260; // Position of the dividing line - moved up a bit for better balance
     
     // === TOP SECTION: Title and Preset Controls ===
     
@@ -264,46 +264,64 @@ void NewPluginSkeletonAudioProcessorEditor::resized()
     savePresetButton.setBounds(presetStartX + presetComboWidth + 10, margin + 8, presetButtonWidth, presetHeight);
     loadPresetButton.setBounds(presetStartX + presetComboWidth + presetButtonWidth + 20, margin + 8, presetButtonWidth, presetHeight);
     
-    // === MIDDLE SECTION: Rotary Controls (Above divider line) ===
+    // === ROTARY CONTROLS SECTION (Above divider line) ===
     
-    const int knobY = margin + titleHeight + 30;
+    const int knobSectionTop = margin + titleHeight + 20;
+    const int knobY = knobSectionTop + labelHeight + 5;
     const int availableWidth = totalWidth - (margin * 2);
-    const int knobSpacing = (availableWidth - (knobSize * 3)) / 2;
+    
+    // Center the three knobs horizontally
+    const int totalKnobWidth = knobSize * 3;
+    const int knobSpacing = 60; // Fixed spacing between knobs
+    const int totalWidthNeeded = totalKnobWidth + (knobSpacing * 2);
+    const int startX = (totalWidth - totalWidthNeeded) / 2;
     
     // Cutoff
-    int xPos = margin;
-    cutoffLabel.setBounds(xPos, knobY - labelHeight, knobSize, labelHeight);
+    int xPos = startX;
+    cutoffLabel.setBounds(xPos, knobSectionTop, knobSize, labelHeight);
     cutoffSlider.setBounds(xPos, knobY, knobSize, knobSize);
     cutoffValueLabel.setBounds(xPos, knobY + knobSize + 5, knobSize, labelHeight);
     
     // Resonance
-    xPos += knobSize + knobSpacing;
-    resonanceLabel.setBounds(xPos, knobY - labelHeight, knobSize, labelHeight);
+    xPos = startX + knobSize + knobSpacing;
+    resonanceLabel.setBounds(xPos, knobSectionTop, knobSize, labelHeight);
     resonanceSlider.setBounds(xPos, knobY, knobSize, knobSize);
     resonanceValueLabel.setBounds(xPos, knobY + knobSize + 5, knobSize, labelHeight);
     
     // Gain
-    xPos += knobSize + knobSpacing;
-    gainLabel.setBounds(xPos, knobY - labelHeight, knobSize, labelHeight);
+    xPos = startX + (knobSize + knobSpacing) * 2;
+    gainLabel.setBounds(xPos, knobSectionTop, knobSize, labelHeight);
     gainSlider.setBounds(xPos, knobY, knobSize, knobSize);
     gainValueLabel.setBounds(xPos, knobY + knobSize + 5, knobSize, labelHeight);
     
-    // === BOTTOM SECTION: Filter Controls (Below divider line) ===
+    // === BUTTON CONTROLS SECTION (Below divider line) ===
     
-    const int bottomSectionY = dividerY + 20; // Start below the divider
-    const int bottomCenterY = bottomSectionY + 20;
+    const int bottomSectionY = dividerY + 15; // Start just below the divider
+    const int buttonSectionHeight = totalHeight - bottomSectionY - margin;
     
-    // Slope section (left side)
-    slopeLabel.setBounds(margin, bottomCenterY, 100, labelHeight);
-    const int slopeButtonY = bottomCenterY + labelHeight + 5;
-    slope6dBButton.setBounds(margin, slopeButtonY, buttonWidth, buttonHeight);
-    slope12dBButton.setBounds(margin + buttonWidth + 5, slopeButtonY, buttonWidth, buttonHeight);
-    slope24dBButton.setBounds(margin + (buttonWidth + 5) * 2, slopeButtonY, buttonWidth, buttonHeight);
+    // Center both button groups vertically in the bottom section
+    const int buttonGroupHeight = labelHeight + 10 + buttonHeight;
+    const int buttonGroupY = bottomSectionY + (buttonSectionHeight - buttonGroupHeight) / 2;
     
-    // Filter type section (right side)
-    const int filterTypeX = totalWidth - margin - (buttonWidth * 3 + 10);
-    filterTypeLabel.setBounds(filterTypeX, bottomCenterY, 120, labelHeight);
-    const int filterButtonY = bottomCenterY + labelHeight + 5;
+    // Calculate horizontal positions for centered button groups
+    const int slopeGroupWidth = buttonWidth * 3 + 10;
+    const int filterGroupWidth = buttonWidth * 3 + 10;
+    const int totalButtonWidth = slopeGroupWidth + filterGroupWidth;
+    const int buttonGroupSpacing = 40;
+    const int buttonStartX = (totalWidth - totalButtonWidth - buttonGroupSpacing) / 2;
+    
+    // Slope section (left group)
+    const int slopeLabelX = buttonStartX;
+    slopeLabel.setBounds(slopeLabelX, buttonGroupY, slopeGroupWidth, labelHeight);
+    const int slopeButtonY = buttonGroupY + labelHeight + 10;
+    slope6dBButton.setBounds(slopeLabelX, slopeButtonY, buttonWidth, buttonHeight);
+    slope12dBButton.setBounds(slopeLabelX + buttonWidth + 5, slopeButtonY, buttonWidth, buttonHeight);
+    slope24dBButton.setBounds(slopeLabelX + (buttonWidth + 5) * 2, slopeButtonY, buttonWidth, buttonHeight);
+    
+    // Filter type section (right group)
+    const int filterTypeX = buttonStartX + slopeGroupWidth + buttonGroupSpacing;
+    filterTypeLabel.setBounds(filterTypeX, buttonGroupY, filterGroupWidth, labelHeight);
+    const int filterButtonY = buttonGroupY + labelHeight + 10;
     lowPassButton.setBounds(filterTypeX, filterButtonY, buttonWidth, buttonHeight);
     highPassButton.setBounds(filterTypeX + buttonWidth + 5, filterButtonY, buttonWidth, buttonHeight);
     bandPassButton.setBounds(filterTypeX + (buttonWidth + 5) * 2, filterButtonY, buttonWidth, buttonHeight);
