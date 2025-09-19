@@ -1,0 +1,52 @@
+# Build directories
+build/
+Builds/
+
+# IDE files
+.vscode/
+.vs/
+*.xcodeproj/
+*.vcxproj*
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Plugin binaries (keep release package but not build artifacts)
+*.component
+*.vst3
+*.au
+
+# Compiled object files
+*.o
+*.obj
+*.d
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared libraries
+*.dll
+*.so
+*.dylib
+
+# Log files
+*.log
+
+# Cache files
+*.cache
+
+# Package files (but keep the final release ZIP)
+# *.zip
+
+# Keep the release ZIP but ignore individual build artifacts
+!Release/*.zip

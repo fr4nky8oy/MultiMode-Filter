@@ -1,3 +1,0 @@
-# Hashes of file build rules.
-89d15c5840e6842d5a90d1f638f6cbd9 MyAwesomePlugin_artefacts/JuceLibraryCode/MyAwesomePlugin_AU/PkgInfo
-019455a64eb5494b086a5f1985a132ec MyAwesomePlugin_artefacts/JuceLibraryCode/MyAwesomePlugin_VST3/PkgInfo
