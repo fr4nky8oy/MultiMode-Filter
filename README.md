@@ -173,7 +173,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - **Developer**: Franky Redente
 - **Framework**: JUCE by Roli Ltd.
-- **Company**: Awesome Audio Co
+- **Company**: FR Audio Co
 - **Built with**: Agentic AI assistance from [Claude Code](https://claude.ai/code) by Anthropic
 
 **Note**: This entire project was developed using agentic AI in Claude Code, demonstrating the power of AI-assisted software development for creating professional-grade audio plugins.
@@ -182,7 +182,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 For support, feature requests, or bug reports:
 - **GitHub Issues**: [Create an issue](../../issues)
-- **Email**: support@awesomeaudio.co
+- **Email**: frankyredente@gmail.com
 
 ---
 
